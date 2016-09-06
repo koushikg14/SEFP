@@ -1,0 +1,47 @@
+1.	What is requirement engineering ?
+Requirements Analysis in software engineering, tells those tasks that go into determining the needs to meet for a new or modified project, taking account of the possibly conflicting requirements of the various stakeholders, documenting, validating and managing software or system requirements.
+Requirements analysis is critical to the success or failure of a systems or software project. The requirements should be documented, actionable, measurable, testable, traceable, related to identified business needs or opportunities, and defined to a level of detail sufficient for system design.
+
+2.	What is Data dictionary ?
+Data dictionary is the centralized collection of information about data. It stores meaning and origin of data, its relationship with other data, data format for usage etc. Data dictionary has rigorous definitions of all names in order to facilitate user and software designers.
+Data dictionary is often referenced as meta-data (data about data) repository. It is created along with DFD (Data Flow Diagram) model of software program and is expected to be updated whenever DFD is changed or updated.
+
+3.	What are the goals of requirements ? 
+Understand the requirements in appropriate details, Define the requirements in a manner that is clear to the client .This may be a written specification, prototype system, or other form of specification. Define the requirements in a manner that is clear to the people who will design, implement, and maintain the system
+Ensure that the client and developers understand the requirements and their implications.
+
+4.	Which of the following is not a diagram studied in Requirement Analysis ?
+a) Use Cases
+b) Entity Relationship Diagram
+c) State Transition Diagram
+d) Activity Diagram
+Option is (D) Activity Diagram comes under the design phase of SDLC .
+
+5.	 Which of the following property of SRS is depicted by the statement : “Conformity to a standard is maintained” ?
+a) Correct
+b) Complete
+c) Consistent
+d) Modifiable
+Option is (b) The SRS is complete full labelling and referencing of all figures, tables etc. and definition of all terms and units of measure is defined.
+
+6. Which of the following statements about SRS are true ? (SRS--- Software Requirements Specification)
+i. SRS is written by customer
+ii. SRS is written by a developer
+iii. SRS serves as a contract between customer and developer
+
+a) Only i is true
+b) Both ii and iii are true
+c) All are true
+Option is (C) The SRS acts as a communication media between the Customer, Analyst, system developers, maintainers etc. Thus it is a contract between Purchaser and Supplier. It is essentially written by a developer on the basis of customer’ need but in some cases it may be written by a customer as well.
+	
+
+7.	What are the main steps in requirement phase as per Mc Clure ?
+1)	Analysis to establish the system's services, constraints, and goals by 
+consultation with client, customers, and users
+
+2)	Modelling to organize the requirements in a systematic and comprehensible manner. 
+ 
+3)	Define record and communicate the requirements.
+
+ Of all with these iterative methods, these stages will be repeated several times.
+
