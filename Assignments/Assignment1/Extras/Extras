@@ -1,1 +1,96 @@
-Your chance do to extra/creative work and gain extra points
+// My tic tac toe game
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{background-color : #0d4752;color : white; font-family:verdana;font-size:27px;}
+.bx{background-color : #00c2ff;height:100px;width:100px;text-align : center;font-family:verdana;font-size:70px;border:solid 1px orange;}
+#container{height:302px;width:302px;}
+#mb{height:50px;width:308px;background-color:#ccdf0b;border:solid 1px green;}
+#reset{height:50px;width:308px;background-color:#0f93ff;border:solid 1px pink;}
+</style>
+</head>
+<body>
+<script>
+
+var player = 1;
+function boxClick(bt){    
+if(player == 1){
+document.getElementById(bt).innerHTML = "X";
+document.getElementById(bt).style.backgroundColor = "yellow";
+player--;
+document.getElementById(bt).disabled = "disabled";
+document.getElementById("mb").innerHTML = "O's turn";
+winner();
+}else{
+document.getElementById(bt).innerHTML = "O";
+player++;
+document.getElementById(bt).style.backgroundColor = "lime";
+document.getElementById(bt).disabled = "disabled";
+document.getElementById("mb").innerHTML = "X's turn";
+winner();
+}
+}
+function winner(){    
+if(document.getElementById("b1").innerHTML == "X" && document.getElementById("b2").innerHTML == "X" && document.getElementById("b3").innerHTML == "X" || document.getElementById("b4").innerHTML == "X" && document.getElementById("b5").innerHTML == "X" && document.getElementById("b6").innerHTML == "X" || document.getElementById("b7").innerHTML == "X" && document.getElementById("b8").innerHTML == "X" && document.getElementById("b9").innerHTML == "X" || document.getElementById("b1").innerHTML == "X" && document.getElementById("b4").innerHTML == "X" && document.getElementById("b7").innerHTML == "X" || document.getElementById("b2").innerHTML == "X" && document.getElementById("b5").innerHTML == "X" && document.getElementById("b8").innerHTML == "X" || document.getElementById("b3").innerHTML == "X" && document.getElementById("b6").innerHTML == "X" && document.getElementById("b9").innerHTML == "X" || document.getElementById("b1").innerHTML == "X" && document.getElementById("b5").innerHTML == "X" && document.getElementById("b9").innerHTML == "X" || document.getElementById("b3").innerHTML == "X" && document.getElementById("b5").innerHTML == "X" && document.getElementById("b7").innerHTML == "X"){
+document.getElementById("win").innerHTML += "<br>  X ";
+reset();
+}else if(document.getElementById("b1").innerHTML == "O" && document.getElementById("b2").innerHTML == "O" && document.getElementById("b3").innerHTML == "O" || document.getElementById("b4").innerHTML == "O" && document.getElementById("b5").innerHTML == "O" && document.getElementById("b6").innerHTML == "O" || document.getElementById("b7").innerHTML == "O" && document.getElementById("b8").innerHTML == "O" && document.getElementById("b9").innerHTML == "O" || document.getElementById("b1").innerHTML == "O" && document.getElementById("b4").innerHTML == "O" && document.getElementById("b7").innerHTML == "O" || document.getElementById("b2").innerHTML == "O" && document.getElementById("b5").innerHTML == "O" && document.getElementById("b8").innerHTML == "O" || document.getElementById("b3").innerHTML == "O" && document.getElementById("b6").innerHTML == "O" && document.getElementById("b9").innerHTML == "O" || document.getElementById("b1").innerHTML == "O" && document.getElementById("b5").innerHTML == "O" && document.getElementById("b9").innerHTML == "O" || document.getElementById("b3").innerHTML == "O" && document.getElementById("b5").innerHTML == "O" && document.getElementById("b7").innerHTML == "O"){
+document.getElementById("win").innerHTML += "<br> O ";
+reset();
+}
+
+}
+
+function reset(){
+document.getElementById("b1").innerHTML = "";
+document.getElementById("b2").innerHTML = "";
+document.getElementById("b3").innerHTML = "";
+document.getElementById("b4").innerHTML = "";
+document.getElementById("b5").innerHTML = "";
+document.getElementById("b6").innerHTML = "";
+document.getElementById("b7").innerHTML = "";
+document.getElementById("b8").innerHTML = "";
+document.getElementById("b9").innerHTML = "";
+document.getElementById("b1").disabled = "";
+document.getElementById("b2").disabled = "";
+document.getElementById("b3").disabled = "";
+document.getElementById("b4").disabled = "";
+document.getElementById("b5").disabled = "";
+document.getElementById("b6").disabled = "";
+document.getElementById("b7").disabled = "";
+document.getElementById("b8").disabled = "";
+document.getElementById("b9").disabled = "";
+//document.getElementById("mb").innerHTML = "X gets to start";
+}
+
+
+</script>
+<center>
+<div id = "win">The winner is</div> <div id = "mb"></div>
+<div id = "container">
+<table border = "0px">
+<tr>
+<td><button class = "bx" id = "b1" onclick = "boxClick('b1')"></button></td>
+<td><button class = "bx" id = "b2" onclick = "boxClick('b2')"></button></td>
+<td><button class = "bx" id = "b3" onclick = "boxClick('b3')"></button></td>
+</tr>
+<tr>
+<td><button class = "bx" id = "b4" onclick = "boxClick('b4')"></button></td>
+<td><button class = "bx" id = "b5" onclick = "boxClick('b5')"></button></td>
+<td><button class = "bx" id = "b6" onclick = "boxClick('b6')"></button></td>
+</tr>
+<tr>
+<td><button class = "bx" id = "b7" onclick = "boxClick('b7')"></button></td>
+<td><button class = "bx" id = "b8" onclick = "boxClick('b8')"></button></td>
+<td><button class = "bx" id = "b9" onclick = "boxClick('b9')"></button></td>
+</tr>
+</table>
+</div>
+<br>
+<button id = "reset" onclick = "reset()">Reset</button>
+</center>    
+</body>
+</html>
